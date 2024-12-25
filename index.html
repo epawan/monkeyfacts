@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monkey Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #factDisplay {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Monkey Facts</h1>
+        <button id="generateFact">Generate Fact</button>
+        <p id="factDisplay"></p>
+    </div>
+    <script>
+        const monkeyFacts = [
+            "There are over 260 species of monkeys.",
+            "Monkeys are divided into Old World and New World groups.",
+            "Many New World monkeys have prehensile tails.",
+            "Monkeys often live in social groups called troops.",
+            "Monkeys use vocalizations and body language to communicate.",
+            "Some monkeys, like capuchins, use tools.",
+            "Monkeys are generally omnivorous.",
+            "Monkeys are known for their intelligence.",
+            "Most monkeys have color vision similar to humans.",
+            "Some monkey species exhibit cultural behaviors."
+        ];
+
+        document.getElementById('generateFact').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * monkeyFacts.length);
+            document.getElementById('factDisplay').textContent = monkeyFacts[randomIndex];
+        });
+    </script>
+</body>
+</html>
